@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eric Bell | Performance Systems</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Inter, Arial, sans-serif; background: #000; color: #fff; line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+    .hero { position: relative; overflow: hidden; border-bottom: 1px solid #27272a; }
+    .hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at top right, rgba(0,255,200,.16), transparent 42%); }
+    .hero-inner { position: relative; z-index: 1; padding: 112px 24px; }
+    .badge { display: inline-flex; border: 1px solid rgba(34,211,238,.45); color: #67e8f9; background: rgba(34,211,238,.1); border-radius: 999px; padding: 8px 16px; font-size: 14px; margin-bottom: 28px; }
+    h1 { font-size: clamp(48px, 8vw, 92px); line-height: .95; letter-spacing: -0.06em; font-weight: 900; max-width: 900px; }
+    h1 span, .cyan { color: #22d3ee; }
+    .lead { color: #d4d4d8; font-size: 21px; max-width: 780px; margin: 32px 0; }
+    .buttons { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+    .btn { border-radius: 18px; padding: 14px 22px; font-weight: 800; border: 1px solid #3f3f46; transition: .2s ease; display: inline-block; }
+    .btn.primary { background: #22d3ee; color: #000; border-color: #22d3ee; }
+    .btn:hover { transform: translateY(-2px); border-color: #22d3ee; }
+    section { padding: 92px 0; }
+    .eyebrow { color: #22d3ee; text-transform: uppercase; letter-spacing: .28em; font-size: 13px; margin-bottom: 14px; }
+    h2 { font-size: clamp(36px, 5vw, 56px); line-height: 1.05; letter-spacing: -0.04em; max-width: 850px; }
+    h3 { font-size: 28px; line-height: 1.15; margin-bottom: 16px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 52px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-top: 52px; }
+    .card { background: #09090b; border: 1px solid #27272a; border-radius: 28px; padding: 34px; }
+    .card:hover { border-color: rgba(34,211,238,.55); }
+    .muted { color: #a1a1aa; }
+    .band { background: #09090b; border-top: 1px solid #27272a; border-bottom: 1px solid #27272a; }
+    .pillar { background: #000; border: 1px solid #27272a; border-radius: 26px; padding: 30px; font-size: 21px; font-weight: 800; }
+    ul { list-style: none; margin-top: 26px; color: #d4d4d8; }
+    li { margin: 10px 0; }
+    .insight-top { display: flex; justify-content: space-between; align-items: end; gap: 20px; margin-bottom: 52px; }
+    .center { text-align: center; max-width: 980px; margin: 0 auto; }
+    .center h2 { margin: 0 auto 28px; }
+    .center .lead { margin-left: auto; margin-right: auto; }
+    footer { border-top: 1px solid #27272a; padding: 32px 0; color: #71717a; }
+    @media (max-width: 850px) { .grid-3, .grid-2 { grid-template-columns: 1fr; } .insight-top { flex-direction: column; align-items: flex-start; } .hero-inner { padding: 84px 24px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="badge">Performance • Leadership • Technology</div>
+        <h1>Building Elite <span>Performance Systems</span></h1>
+        <p class="lead">Former professional athlete, development coach, and technology founder helping athletes, leaders, and organizations perform at their highest level through mindset, leadership, and infrastructure.</p>
+        <div class="buttons">
+          <a class="btn primary" href="#contact">Work With Eric</a>
+          <a class="btn" href="#pdc">Explore PDC</a>
+          <a class="btn" href="#sts">Explore STS</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <p class="eyebrow">About Eric Bell</p>
+        <h2>One ecosystem connecting sports, leadership, and technology.</h2>
+        <div class="grid-3">
+          <div class="card"><h3 class="cyan">Former Athlete</h3><p class="muted">Professional athlete experience transformed into lessons on discipline, resilience, leadership, and high performance.</p></div>
+          <div class="card"><h3 class="cyan">Development Coach</h3><p class="muted">Founder of Players Development Club, helping athletes and parents build confidence, emotional intelligence, leadership, and elite habits.</p></div>
+          <div class="card"><h3 class="cyan">Technology Founder</h3><p class="muted">Founder of Sino Technology Solutions, focused on AI systems, cybersecurity, infrastructure, and performance-driven technology solutions.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="container">
+        <p class="eyebrow">Core Pillars</p>
+        <h2>The High-Performance Ecosystem</h2>
+        <div class="grid-3">
+          <div class="pillar">Athlete Development</div>
+          <div class="pillar">Leadership & Mindset</div>
+          <div class="pillar">AI & Innovation</div>
+          <div class="pillar">Sports Technology</div>
+          <div class="pillar">Performance Systems</div>
+          <div class="pillar">Infrastructure Strategy</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container grid-2">
+        <div class="card" id="pdc">
+          <p class="eyebrow">Players Development Club</p>
+          <h3>Human Performance Division</h3>
+          <p class="muted">Helping young athletes and parents navigate mindset, emotional intelligence, leadership, confidence, and elite development.</p>
+          <ul>
+            <li>• Athlete Development Coaching</li>
+            <li>• Parent Advisory Programs</li>
+            <li>• Speaking & Workshops</li>
+            <li>• Leadership Development</li>
+            <li>• Performance Mindset Systems</li>
+          </ul>
+        </div>
+        <div class="card" id="sts">
+          <p class="eyebrow">Sino Technology Solutions</p>
+          <h3>Infrastructure & AI Division</h3>
+          <p class="muted">Delivering AI systems, cybersecurity, infrastructure consulting, and technology strategy for modern organizations.</p>
+          <ul>
+            <li>• AI Infrastructure</li>
+            <li>• Private Knowledgebase Systems</li>
+            <li>• Cybersecurity Consulting</li>
+            <li>• Sports IT Infrastructure</li>
+            <li>• Enterprise Technology Strategy</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="container">
+        <div class="insight-top">
+          <div>
+            <p class="eyebrow">Insights & Thought Leadership</p>
+            <h2>Building authority through ideas, systems, and innovation.</h2>
+          </div>
+          <a class="btn" href="#">View All Insights</a>
+        </div>
+        <div class="grid-3">
+          <div class="card"><p class="eyebrow">Athlete Development</p><h3>Why Emotional Intelligence Matters in Sports</h3><a class="cyan" href="#">Read Insight →</a></div>
+          <div class="card"><p class="eyebrow">Technology</p><h3>The Future of AI in Sports Organizations</h3><a class="cyan" href="#">Read Insight →</a></div>
+          <div class="card"><p class="eyebrow">Leadership</p><h3>Building Elite Habits Off the Court</h3><a class="cyan" href="#">Read Insight →</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container center">
+        <p class="eyebrow">Work With Eric Bell</p>
+        <h2>Building the future of <span class="cyan">human and technical performance.</span></h2>
+        <p class="lead">Coaching, consulting, leadership development, AI systems, speaking engagements, and performance-driven infrastructure strategy.</p>
+        <div class="buttons" style="justify-content:center;">
+          <a class="btn primary" href="mailto:homebasenc@protonmail.com">Book a Consultation</a>
+          <a class="btn" href="mailto:homebasenc@protonmail.com">Contact Eric</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container">© 2026 Eric Bell. Performance • Leadership • Technology.</div></footer>
+</body>
+</html>
